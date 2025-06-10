@@ -103,7 +103,7 @@ h1, h2 {
   width: 32px;
   height: 32px;
   margin: 0 10px;
-  filter: invert(1); /* optional for white icons on dark bg */
+  filter: invert(1); /*optional for white icons on dark bg*/
   transition: transform 0.3s;
 }
 
