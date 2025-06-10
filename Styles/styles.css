@@ -89,15 +89,15 @@ h1, h2 {
 #Welcome-Socials > div {
   cursor: pointer;
   padding: 0.5rem 1rem;
-  border: 1px solid #00fff7;
+  /* border: 1px solid #00fff7;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.3s; */
 }
 
-#Welcome-Socials > div:hover {
+/* #Welcome-Socials > div:hover {
   background-color: #00fff7;
   color: #000;
-}
+} */
 
 .social-icon {
   width: 32px;
