@@ -22,7 +22,7 @@ p {
   color: #f0f0f0;
 }
 
-.Dark.Text {
+.DarkText {
   color: #000
 }
 
@@ -30,7 +30,7 @@ h1, h2 {
   margin-bottom: 0.5em;
 }
 
-/* Icons */
+/* ===== Icons ===== */
 
 .large-icon {
   width: 96px;
@@ -131,7 +131,7 @@ h1, h2 {
 }
 
 /* ===== Carousel (Projects / Blogs) ===== */
-.Carousel {
+/* .Carousel {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -153,6 +153,54 @@ h1, h2 {
 .CarouselItem:hover {
   transform: scale(1.05);
   background-color: #2a2a2a;
+} */
+
+.Carosel{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.CarouselTrack {
+  display: flex;
+  transition: transform 0.4s ease;
+  scroll-behavior: smooth;
+}
+
+.CarouselItem {
+  flex: 0 0 100%; /* or 33.3% for 3 at a time, etc. */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.CarouselItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.CarouselArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.CarouselArrow.Left {
+  left: 10px;
+}
+
+.CarouselArrow.Right {
+  right: 10px;
 }
 
 .Button{
