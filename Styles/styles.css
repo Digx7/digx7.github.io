@@ -99,6 +99,19 @@ h1, h2 {
   color: #000;
 }
 
+.social-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  filter: invert(1); /* optional for white icons on dark bg */
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+
 /* ===== Section Headers ===== */
 .Section.Header {
   text-align: center;
