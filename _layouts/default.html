@@ -13,6 +13,43 @@
   </main>
 
   {% include footer.html %}
-  <script src="/Assets/JavaScript/carousel.js"></script>
+  <!-- <script src="/Assets/JavaScript/carousel.js"></script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.querySelector(".carousel-container");
+      const track = container.querySelector(".carousel-track");
+      const items = container.querySelectorAll(".carousel-item");
+      const prevBtn = container.querySelector(".carousel-arrow.left");
+      const nextBtn = container.querySelector(".carousel-arrow.right");
+
+      let index = 0;
+      const itemWidth = items[0].getBoundingClientRect().width;
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${index * itemWidth}px)`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        if (index < items.length - 1) {
+          index++;
+          updateCarousel();
+        }
+      });
+
+      prevBtn.addEventListener("click", () => {
+        if (index > 0) {
+          index--;
+          updateCarousel();
+        }
+      });
+
+      // Optional: Update itemWidth on resize
+      window.addEventListener("resize", () => {
+        updateCarousel();
+      });
+  });
+</script>
+
+
 </body>
 </html>

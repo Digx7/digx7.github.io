@@ -155,7 +155,7 @@ h1, h2 {
   background-color: #2a2a2a;
 } */
 
-.Carosel{
+/* .Carosel{
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -171,7 +171,7 @@ h1, h2 {
 }
 
 .CarouselItem {
-  flex: 0 0 100%; /* or 33.3% for 3 at a time, etc. */
+  flex: 0 0 100%;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -202,7 +202,60 @@ h1, h2 {
 
 .CarouselArrow.Right {
   right: 10px;
+} */
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
 }
+
+.carousel-track-wrapper {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Show one at a time — change to 50% or 33.3% for more */
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 2rem;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  padding: 0.5em 0.7em;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
+
 
 .Button{
   background-color: #00fff7;
