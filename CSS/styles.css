@@ -6,11 +6,13 @@
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: 'Fira Code', monospace;
   background-color: #0d0d0d;
   color: #f0f0f0;
   line-height: 1.6;
   scroll-behavior: smooth;
+  font-weight: 600;
 }
 
 a {
