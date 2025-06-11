@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  {% include navbar.html %}
-  
-  <main>
-    {{ content }}
-  </main>
-
-  {% include footer.html %}
-  <!-- <script src="/Assets/JavaScript/carousel.js"></script> -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
       const carousels = document.querySelectorAll(".carousel-container");
 
       carousels.forEach((carousel) => {
@@ -122,8 +104,3 @@
       });
 
   });
-</script>
-
-
-</body>
-</html>

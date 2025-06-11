@@ -1,0 +1,57 @@
+# Site settings
+title: Everette Webber Portfolio
+description: >- 
+  Developer Portfolio featuring projects, blogs, and more.
+baseurl: "" # e.g., /portfolio if hosted in a subdirectory
+url: "https://yourdomain.com" # change to your domain when live
+
+# Build settings
+markdown: kramdown
+theme: minima # or leave empty if not using a theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Permalinks: Remove .html from URLs
+permalink: pretty
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Sass/CSS
+sass:
+  style: compressed
+
+# Defaults (optional: helps apply layouts automatically)
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude these from the build (optional)
+exclude:
+  - node_modules
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - yarn.lock
+
+# Include any static files or directories Jekyll might ignore
+include:
+  - _projects

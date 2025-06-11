@@ -1,0 +1,21 @@
+/* ===== NavBar ===== */
+#NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.NavButton {
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.NavButton:hover {
+  color: #00fff7;
+}
