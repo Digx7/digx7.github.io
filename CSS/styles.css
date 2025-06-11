@@ -207,7 +207,7 @@ h1, h2 {
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   overflow: hidden;
   padding: 20px 0;
@@ -215,6 +215,7 @@ h1, h2 {
 
 .carousel-track-wrapper {
   overflow: hidden;
+  width: 100%;
 }
 
 .carousel-track {
@@ -223,7 +224,7 @@ h1, h2 {
 }
 
 .carousel-item {
-  flex: 0 0 100%; /* Show one at a time — change to 50% or 33.3% for more */
+  flex: 0 0 calc(100% / 3); /* Default to 3 per view */
   box-sizing: border-box;
   padding: 0 10px;
 }
@@ -232,6 +233,7 @@ h1, h2 {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  display: block;
 }
 
 .carousel-arrow {
@@ -254,6 +256,13 @@ h1, h2 {
 
 .carousel-arrow.right {
   right: 10px;
+}
+
+/* Show 4 items on wider screens */
+@media screen and (min-width: 992px) {
+  .carousel-item {
+    flex: 0 0 calc(100% / 4);
+  }
 }
 
 
