@@ -23,34 +23,77 @@
         const items = carousel.querySelectorAll(".carousel-item");
         const prevBtn = carousel.querySelector(".carousel-arrow.left");
         const nextBtn = carousel.querySelector(".carousel-arrow.right");
+
+        let itemsPerView = window.innerWidth >= 992 ? 4 : 3;
         let index = 0;
 
-        const getItemsPerView = () => window.innerWidth >= 992 ? 4 : 3;
+        // Clone items for looping effect
+        const cloneItems = () => {
+          const clonesBefore = [];
+          const clonesAfter = [];
+          for (let i = 0; i < itemsPerView; i++) {
+            clonesBefore.push(items[items.length - 1 - i].cloneNode(true));
+            clonesAfter.push(items[i].cloneNode(true));
+          }
+          clonesBefore.reverse().forEach(clone => track.prepend(clone));
+          clonesAfter.forEach(clone => track.appendChild(clone));
+        };
 
-        function updateCarousel() {
-          const itemWidth = items[0].getBoundingClientRect().width;
-          const scrollAmount = itemWidth * getItemsPerView();
-          track.style.transform = `translateX(-${index * scrollAmount}px)`;
+        cloneItems();
+
+        const allItems = carousel.querySelectorAll(".carousel-item");
+        const totalItems = allItems.length;
+        const itemWidth = allItems[0].getBoundingClientRect().width;
+        const scrollAmount = itemWidth * itemsPerView;
+
+        // Set initial offset to show first real items
+        let offset = itemsPerView;
+        track.style.transform = `translateX(-${offset * itemWidth}px)`;
+
+        function moveToIndex(newIndex) {
+          offset = newIndex + itemsPerView;
+          track.style.transition = "transform 0.4s ease";
+          track.style.transform = `translateX(-${offset * itemWidth}px)`;
+          index = newIndex;
         }
 
-        prevBtn.addEventListener("click", () => {
-          if (index > 0) {
-            index--;
-            updateCarousel();
-          }
-        });
-
-        nextBtn.addEventListener("click", () => {
-          const maxIndex = Math.ceil(items.length / getItemsPerView()) - 1;
-          if (index < maxIndex) {
+        function handleNext() {
+          if (index >= items.length) {
+            index = 0;
+          } else {
             index++;
-            updateCarousel();
+          }
+          moveToIndex(index);
+        }
+
+        function handlePrev() {
+          if (index <= -1) {
+            index = items.length - 1;
+          } else {
+            index--;
+          }
+          moveToIndex(index);
+        }
+
+        track.addEventListener("transitionend", () => {
+          if (index >= items.length) {
+            track.style.transition = "none";
+            index = 0;
+            offset = itemsPerView;
+            track.style.transform = `translateX(-${offset * itemWidth}px)`;
+          }
+          if (index < 0) {
+            track.style.transition = "none";
+            index = items.length - 1;
+            offset = items.length - 1 + itemsPerView;
+            track.style.transform = `translateX(-${offset * itemWidth}px)`;
           }
         });
 
-        window.addEventListener("resize", updateCarousel);
+        prevBtn.addEventListener("click", handlePrev);
+        nextBtn.addEventListener("click", handleNext);
 
-        // --- Touch Support ---
+        // Touch/swipe support
         let startX = 0;
         let endX = 0;
 
@@ -63,21 +106,18 @@
         });
 
         track.addEventListener("touchend", () => {
-          const threshold = 50; // Minimum swipe distance
           const deltaX = endX - startX;
-
-          if (deltaX > threshold && index > 0) {
-            index--;
-          } else if (deltaX < -threshold && index < Math.ceil(items.length / getItemsPerView()) - 1) {
-            index++;
-          }
-
-          updateCarousel();
+          const threshold = 50;
+          if (deltaX > threshold) handlePrev();
+          if (deltaX < -threshold) handleNext();
           startX = 0;
           endX = 0;
         });
 
-        updateCarousel();
+        window.addEventListener("resize", () => {
+          itemsPerView = window.innerWidth >= 992 ? 4 : 3;
+          moveToIndex(0);
+        });
       });
 
   });
