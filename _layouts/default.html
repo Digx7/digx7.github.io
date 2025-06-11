@@ -16,12 +16,13 @@
   <!-- <script src="/Assets/JavaScript/carousel.js"></script> -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const container = document.querySelector(".carousel-container");
-      const track = container.querySelector(".carousel-track");
-      const items = container.querySelectorAll(".carousel-item");
-      const prevBtn = container.querySelector(".carousel-arrow.left");
-      const nextBtn = container.querySelector(".carousel-arrow.right");
+      const carousels = document.querySelectorAll(".carousel-container");
 
+    carousels.forEach((carousel) => {
+      const track = carousel.querySelector(".carousel-track");
+      const items = carousel.querySelectorAll(".carousel-item");
+      const prevBtn = carousel.querySelector(".carousel-arrow.left");
+      const nextBtn = carousel.querySelector(".carousel-arrow.right");
       let index = 0;
 
       function getItemsPerView() {
@@ -34,6 +35,13 @@
         track.style.transform = `translateX(-${index * scrollAmount}px)`;
       }
 
+      prevBtn.addEventListener("click", () => {
+        if (index > 0) {
+          index--;
+          updateCarousel();
+        }
+      });
+
       nextBtn.addEventListener("click", () => {
         const maxIndex = Math.ceil(items.length / getItemsPerView()) - 1;
         if (index < maxIndex) {
@@ -42,19 +50,9 @@
         }
       });
 
-      prevBtn.addEventListener("click", () => {
-        if (index > 0) {
-          index--;
-          updateCarousel();
-        }
-      });
-
-      window.addEventListener("resize", () => {
-        updateCarousel();
-      });
-
-      // Initial positioning
+      window.addEventListener("resize", updateCarousel);
       updateCarousel();
+    });
   });
 </script>
 
