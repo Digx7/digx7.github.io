@@ -1,29 +1,57 @@
-
-
 #article-cap {
-    padding: 4rem 2rem;
-    background: linear-gradient(145deg, #0f0f0f, #1f1f1f);
-}
-
-#article-cap i {
-    align-items: center;
-    margin: 4rem 0 2rem;
-    max-width: 900px;
-}
-
-#article-cap iframe {
-    align-items: center;
-    margin: 4rem 0 2rem;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 174, 0.15);
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 #article-cap a {
-    align-items: center;
-    margin: 4rem 0 2rem;
+  display: inline-block;
+  margin-top: 1rem;
+  color: #00ffae;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#article-cap a:hover {
+  text-decoration: underline;
+}
+
+iframe {
+  border-radius: 8px;
+  margin-top: 1rem;
+  max-width: 100%;
 }
 
 #article-content {
-    padding: 3rem 2rem;
-    margin: 0 0 0;
-    max-width: 700px;
-    background-color: #121212;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#article-content h2,
+#article-content h3 {
+  color: #00ffae;
+  margin-top: 2rem;
+}
+
+#article-content p {
+  font-size: 1.1rem;
+}
+
+#article-content code {
+  background: #222;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  /* font-family: var(--font-mono); */
+}
+
+#article-content pre {
+  background: #1b1b1b;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
 }
