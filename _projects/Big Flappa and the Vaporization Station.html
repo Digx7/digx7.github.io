@@ -10,16 +10,16 @@ github: "https://github.com/Digx7/HotJam_BoilingPoint_VGDC"
 
 <div id="article-cap">
     <h1 class="Section Header">Big Flappa and the Vaporization Station</h1>
-    {% if page.date %}
-        <div><i>{{ page.date | date: "%Y-%m-%d"}}</i></div>
+    {% if project.date %}
+        <div><i>{{ project.date | date: "%Y-%m-%d"}}</i></div>
     {% endif %}
 
-    {% if page.frame %}
-        <div>{{ page.frame }}</div>
+    {% if project.frame %}
+        <div>{{ project.frame }}</div>
     {% endif %}
 
-    {% if page.github %}
-        <div><a src="{{ page.github | absolute_url }}">Github</a></div>
+    {% if project.github %}
+        <div><a src="{{ project.github | absolute_url }}">Github</a></div>
     {% endif %}
 </div>
 
@@ -28,12 +28,12 @@ github: "https://github.com/Digx7/HotJam_BoilingPoint_VGDC"
 </div>
 
 <div id="article-cap">
-    {% if page.frame %}
-        <div>{{ page.frame }}</div>
+    {% if project.frame %}
+        <div>{{ project.frame }}</div>
     {% endif %}
     
-    {% if page.github %}
-        <div><a src="{{ page.github | absolute_url }}">Github</a></div>
+    {% if project.github %}
+        <div><a src="{{ project.github | absolute_url }}">Github</a></div>
     {% endif %}
 </div>
 
