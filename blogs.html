@@ -3,19 +3,19 @@ layout: grid
 title: blogs
 ---
 
-<div class="Section Header" id="blogs-Header"><h2>blogs</h2></div>
+<div class="Section Header" id="blogs-Header"><h2>Blogs</h2></div>
 <section class="grid-section">
 
   <div class="grid">
-    {% for blog in site.blogs %}
-      <a href="{{ blog.url | relative_url }}" class="grid-card">
-        <div class="blog-content">
-          {% if blog.image %}
-            <img src="{{ blog.image | relative_url }}" alt="{{ blog.title }} thumbnail">
+    {% for post in site.posts %}
+      <a href="{{ post.url | relative_url }}" class="grid-card">
+        <div class="grid-content">
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }} thumbnail">
           {% endif %}
-          <h2>{{ blog.title }}</h2>
-          <p>{{ blog.date }}</p>
-          <p>{{ blog.description }}</p>
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.date }}</p>
+          <p>{{ post.description }}</p>
         </div>
       </a>
     {% endfor %}
