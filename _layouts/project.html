@@ -13,7 +13,34 @@
   {% include components/navbar.html %}
   
   <main>
-    {{ content }}
+    <div id="article-cap">
+      <h1 class="Section Header">Big Flappa and the Vaporization Station</h1>
+      {% if page.date %}
+          <div><i>{{ page.date | date: "%Y-%m-%d"}}</i></div>
+      {% endif %}
+
+      {% if page.frame %}
+          <div>{{ page.frame }}</div>
+      {% endif %}
+
+      {% if page.github %}
+          <div><a src="{{ page.github | absolute_url }}">Github</a></div>
+      {% endif %}
+    </div>
+
+    <div id="article-content">
+        {{ content }}
+    </div>
+
+    <div id="article-cap">
+        {% if page.frame %}
+            <div>{{ page.frame }}</div>
+        {% endif %}
+        
+        {% if page.github %}
+            <div><a src="{{ page.github | absolute_url }}">Github</a></div>
+        {% endif %}
+    </div>
   </main>
 
   {% include components/footer.html %}
