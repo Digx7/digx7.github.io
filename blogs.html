@@ -15,7 +15,7 @@ title: blogs
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }} thumbnail">
           {% endif %}
           <h2>{{ post.title }}</h2>
-          <p>{{ post.date }}</p>
+          <i>{{ post.date | date: "%Y-%m-%d" }}</i>
           <p>{{ post.description }}</p>
         </div>
       </a>

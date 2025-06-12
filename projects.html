@@ -15,7 +15,7 @@ title: projects
             <img src="{{ project.image | relative_url }}" alt="{{ project.title }} thumbnail">
           {% endif %}
           <h2>{{ project.title }}</h2>
-          <p>{{ project.date }}</p>
+          <i>{{ project.date | date: "%Y-%m-%d" }}</i>
           <p>{{ project.description }}</p>
         </div>
       </a>
