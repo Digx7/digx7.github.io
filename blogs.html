@@ -3,13 +3,21 @@ layout: grid
 title: blogs
 ---
 
-<div class="Section Header" id="Blogs-Header"><h2>Blogs</h2></div>
-<div class="grid-container">
-    <div class="grid-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 1"><h3>Blog 1</h3><p>Jan 2025</p><p>Series</p><p>Blog 1 tag</p></div>
-    <div class="grid-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 2"><h3>Blog 2</h3><p>Jan 2025</p><p>Series</p><p>Blog 2 tag</p></div>
-    <div class="grid-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 3"><h3>Blog 3</h3><p>Jan 2025</p><p>Series</p><p>Blog 3 tag</p></div>
-    <div class="grid-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 4"><h3>Blog 4</h3><p>Jan 2025</p><p>Series</p><p>Blog 4 tag</p></div>
-    <div class="grid-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 5"><h3>Blog 5</h3><p>Jan 2025</p><p>Series</p><p>Blog 5 tag</p></div>
-    <div class="grid-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 6"><h3>Blog 6</h3><p>Jan 2025</p><p>Series</p><p>Blog 6 tag</p></div>
-    <div class="grid-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 7"><h3>Blog 7</h3><p>Jan 2025</p><p>Series</p><p>Blog 7 tag</p></div>
-</div>
+<div class="Section Header" id="blogs-Header"><h2>blogs</h2></div>
+<section class="grid-section">
+
+  <div class="grid">
+    {% for blog in site.blogs %}
+      <a href="{{ blog.url | relative_url }}" class="grid-card">
+        <div class="blog-content">
+          {% if blog.image %}
+            <img src="{{ blog.image | relative_url }}" alt="{{ blog.title }} thumbnail">
+          {% endif %}
+          <h2>{{ blog.title }}</h2>
+          <p>{{ blog.date }}</p>
+          <p>{{ blog.description }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

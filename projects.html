@@ -4,16 +4,17 @@ title: projects
 ---
 
 <div class="Section Header" id="Projects-Header"><h2>Projects</h2></div>
-<section class="projects-section">
+<section class="grid-section">
 
-  <div class="projects-grid">
+  <div class="grid">
     {% for project in site.projects %}
-      <a href="{{ project.url | relative_url }}" class="project-card">
+      <a href="{{ project.url | relative_url }}" class="grid-card">
         <div class="project-content">
           {% if project.image %}
             <img src="{{ project.image | relative_url }}" alt="{{ project.title }} thumbnail">
           {% endif %}
           <h2>{{ project.title }}</h2>
+          <p>{{ project.date }}</p>
           <p>{{ project.description }}</p>
         </div>
       </a>
