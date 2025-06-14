@@ -51,12 +51,32 @@ title: home
 
         <div class="carousel-track-wrapper">
             <div class="carousel-track">
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Project 1"><h3>Project 1</h3><p>Project 1 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Project 2"><h3>Project 2</h3><p>Project 2 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Project 3"><h3>Project 3</h3><p>Project 3 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Project 4"><h3>Project 4</h3><p>Project 4 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Project 5"><h3>Project 5</h3><p>Project 5 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Project 6"><h3>Project 6</h3><p>Project 6 tag</p></div>
+                {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+                {% assign published_projects = sorted_projects | where_exp: "item", "item.draft != true" %}
+                {% assign top_5_projects = published_projects | slice: 0, 5 %}
+
+                {% for project in top_5_projects %}
+                    <h2>{{ project.title }}</h2>
+                    <div class="carousel-item">
+                        {% if project.image %}
+                            <img src="{{ project.image | relative_url }}" alt="{{ project.title }} thumbnail">
+                        {% else %}
+                            <img src="/assets/images/Digx7-Logo-White_v2.svg" alt="{{ project.title }} thumbnail">
+                        {% endif %}
+
+                        {% if project.title %}
+                            <h2>{{ project.title }}</h2>
+                        {% else %}
+                            <h2>Untitled Project</h2>
+                        {% endif %}
+
+                        {% if project.description %}
+                            <p>{{ project.description }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                
+                
             </div>
         </div>
 
@@ -72,12 +92,34 @@ title: home
 
         <div class="carousel-track-wrapper">
             <div class="carousel-track">
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 1"><h3>Blog 1</h3><p>Jan 2025</p><p>Series</p><p>Blog 1 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 2"><h3>Blog 2</h3><p>Jan 2025</p><p>Series</p><p>Blog 2 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 3"><h3>Blog 3</h3><p>Jan 2025</p><p>Series</p><p>Blog 3 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 4"><h3>Blog 4</h3><p>Jan 2025</p><p>Series</p><p>Blog 4 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 5"><h3>Blog 5</h3><p>Jan 2025</p><p>Series</p><p>Blog 5 tag</p></div>
-            <div class="carousel-item"><img src="/assets/images/1920x1080_watermark.png" alt="Blog 6"><h3>Blog 6</h3><p>Jan 2025</p><p>Series</p><p>Blog 6 tag</p></div>
+                {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+                {% assign published_posts = sorted_posts | where_exp: "item", "item.draft != true" %}
+                {% assign top_5_posts = published_posts | slice: 0, 5 %}
+                
+                {% for post in top_5_posts %}
+                <div class="carousel-item">
+                    {% if post.image %}
+                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }} thumbnail">
+                    {% else %}
+                        <img src="/assets/images/Digx7-Logo-White_v2.svg" alt="{{ post.title }} thumbnail">
+                    {% endif %}
+
+                    {% if post.title %}
+                        <h2>{{ post.title }}</h2>
+                    {% else %}
+                        <h2>Untitled BLog</h2>
+                    {% endif %}
+
+                    {% if post.date %}
+                        <i>{{ post.date | date: "%Y-%m-%d" }}</i>
+                    {% else %}
+                        <i>unknown date</i>
+                    {% endif %}
+
+                    {% if post.description %}
+                        <p>{{ post.description }}</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
 
