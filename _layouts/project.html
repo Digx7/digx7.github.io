@@ -14,9 +14,18 @@
   
   <main>
     <div class="article-header">
-      <h1 class="Section Header">{{page.title}}</h1>
+
+      {% if page.title %}
+        <h1 class="Section Header">{{page.title}}</h1>
+      {% else %}
+        <h1 class="Section Header">Missing Title</h1>
+      {% endif %}
+
+      
       {% if page.date %}
           <div><i>{{ page.date | date: "%Y-%m-%d"}}</i></div>
+      {% else %}
+          <div><i>No Date Given</i></div>
       {% endif %}
     </div>
 
