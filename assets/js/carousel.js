@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
             index = 0;
           } else {
             index++;
-            moveToIndex(index);
           }
+          moveToIndex(index);
         }
 
         function handlePrev() {
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
             index = items.length - 1;
           } else {
             index--;
-            moveToIndex(index);
           }
+          moveToIndex(index);
         }
 
         track.addEventListener("transitionend", () => {
