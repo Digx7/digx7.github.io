@@ -5,9 +5,15 @@
   align-items: center;
   padding: 1rem 2rem;
   background-color: #1a1a1a;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+#NavBar.hide {
+  transform: translateY(-100%);
 }
 
 .NavButton {
