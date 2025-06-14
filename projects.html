@@ -9,8 +9,8 @@ title: projects
   <div class="grid">
     {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
     {% for project in sorted_projects %}
-    
-      {% if post.draft %}
+
+      {% if project.draft %}
         {% continue %}
       {% endif %}
 
