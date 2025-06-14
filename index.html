@@ -56,7 +56,6 @@ title: home
                 {% assign top_5_projects = published_projects | slice: 0, 5 %}
 
                 {% for project in top_5_projects %}
-                    <h2>{{ project.title }}</h2>
                     <div class="carousel-item">
                         {% if project.image %}
                             <img src="{{ project.image | relative_url }}" alt="{{ project.title }} thumbnail">
