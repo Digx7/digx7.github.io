@@ -9,6 +9,11 @@ title: projects
   <div class="grid">
     {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
     {% for project in sorted_projects %}
+    
+      {% if post.draft %}
+        {% continue %}
+      {% endif %}
+
       <a href="{{ project.url | relative_url }}" class="grid-card">
         <div class="project-content">
           {% if project.image %}
