@@ -4,12 +4,6 @@
   color: #f0f0f0;
 }
 
-/* .projects-section h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-family: 'JetBrains Mono', monospace;
-} */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

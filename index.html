@@ -49,43 +49,42 @@ title: home
     <div class="carousel-container">
         <button class="carousel-arrow left">&#10094;</button>
 
-        <div class="carousel-track-wrapper">
-            <div class="carousel-track">
-                {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
-                {% assign stared_projects = sorted_projects | where_exp: "item", "item.star == true" %}
+        <div class="carousel-track">
+            {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+            {% assign stared_projects = sorted_projects | where_exp: "item", "item.star == true" %}
 
-                {% for project in stared_projects %}
-                    <a href="{{ project.url | relative_url }}">
-                        <div class="carousel-item">
-                            {% if project.image %}
-                                <img src="{{ project.image | relative_url }}" alt="{{ project.title }} thumbnail">
-                            {% else %}
-                                <img src="/assets/images/Digx7-Logo-White_v2.svg" alt="{{ project.title }} thumbnail">
-                            {% endif %}
-
-                            {% if project.title %}
-                                <h2>{{ project.title }}</h2>
-                            {% else %}
-                                <h2>Untitled Project</h2>
-                            {% endif %}
-
-                            {% if project.description %}
-                                <p>{{ project.description }}</p>
-                            {% endif %}
-                        </div>
-                    </a>
-                {% endfor %}
-
-                <a href="https://digx7.github.io/projects/">
+            {% for project in stared_projects %}
+                <a href="{{ project.url | relative_url }}">
                     <div class="carousel-item">
-                        <img src="/assets/images/Digx7-Logo-White_v2.svg" alt="{{ project.title }} thumbnail">
-                        <h2>View More</h2>
-                        <p>See all projects</p>
+                        {% if project.image %}
+                            <img src="{{ project.image | relative_url }}" alt="{{ project.title }} thumbnail">
+                        {% else %}
+                            <img src="/assets/images/Digx7-Logo-White_v2.svg" alt="{{ project.title }} thumbnail">
+                        {% endif %}
+
+                        {% if project.title %}
+                            <h2>{{ project.title }}</h2>
+                        {% else %}
+                            <h2>Untitled Project</h2>
+                        {% endif %}
+
+                        {% if project.description %}
+                            <p>{{ project.description }}</p>
+                        {% endif %}
                     </div>
                 </a>
-                
-            </div>
+            {% endfor %}
+
+            <a href="https://digx7.github.io/projects/">
+                <div class="carousel-item">
+                    <img src="/assets/images/Digx7-Logo-White_v2.svg" alt="{{ project.title }} thumbnail">
+                    <h2>View More</h2>
+                    <p>See all projects</p>
+                </div>
+            </a>
+            
         </div>
+        
 
         <button class="carousel-arrow right">&#10095;</button>
     </div>
