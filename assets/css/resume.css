@@ -7,6 +7,18 @@
     background: linear-gradient(145deg, #0f0f0f, #1f1f1f);
 }
 
+#Socials {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#Socials > div {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
 #Resume-Summary, #Resume-Skills, #Resume-Education {
     padding: 3rem 2rem;
     text-align: center;
@@ -16,6 +28,10 @@
 #Resume-SummaryContent, #Resume-SkillsContent, #Resume-EducationConent {
   max-width: 700px;
   margin: auto;
+}
+
+#Resume-SkillsContent {
+    text-align: left;
 }
 
 
