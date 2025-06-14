@@ -10,28 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
         let itemsPerView = window.innerWidth >= 992 ? 4 : 3;
         let index = 0;
 
-        // Clone items for looping effect
-        const cloneItems = () => {
-          const clonesBefore = [];
-          const clonesAfter = [];
-          for (let i = 0; i < itemsPerView; i++) {
-            clonesBefore.push(items[items.length - 1 - i].cloneNode(true));
-            clonesAfter.push(items[i].cloneNode(true));
-          }
-          clonesBefore.reverse().forEach(clone => track.prepend(clone));
-          clonesAfter.forEach(clone => track.appendChild(clone));
-        };
-
-        cloneItems();
-
         const allItems = carousel.querySelectorAll(".carousel-item");
         const totalItems = allItems.length;
         const itemWidth = allItems[0].getBoundingClientRect().width;
         const scrollAmount = itemWidth * itemsPerView;
-
-        // Set initial offset to show first real items
-        let offset = itemsPerView;
-        track.style.transform = `translateX(-${offset * itemWidth}px)`;
 
         function moveToIndex(newIndex) {
           offset = newIndex + itemsPerView;
@@ -45,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
             index = 0;
           } else {
             index++;
+            moveToIndex(index);
           }
-          moveToIndex(index);
         }
 
         function handlePrev() {
@@ -54,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
             index = items.length - 1;
           } else {
             index--;
+            moveToIndex(index);
           }
-          moveToIndex(index);
         }
 
         track.addEventListener("transitionend", () => {
