@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     track.addEventListener("touchend", (e) => {
       isDragging = false;
       const deltaX = e.changedTouches[0].clientX - startX;
-      track.style.transition = "transform 0.3s ease";
+      track.style.transition = "transform 0.5s ease-in-out";
 
       if (deltaX > 50 && currentIndex > 0) {
         currentIndex--;
