@@ -8,9 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const rightArrow = container.querySelector(".carousel-arrow.right");
 
     let currentIndex = 0;
-    const itemsPerView = 1; // Adjust based on your layout
-    const itemWidth = items[0].offsetWidth + parseFloat(getComputedStyle(items[0]).marginRight || 0);
-    const totalItems = items.length;
+    // const itemsPerView = 1; // Adjust based on your layout
+    // const itemWidth = items[0].offsetWidth + parseFloat(getComputedStyle(items[0]).marginRight || 0);
+    // const totalItems = items.length;
+
+    const itemStyle = getComputedStyle(items[0]);
+    const itemWidth = items[0].offsetWidth;
+    const gap = parseFloat(itemStyle.marginRight) || parseFloat(getComputedStyle(track).gap) || 0;
+
+    const scrollAmount = itemWidth + gap;
+    const itemsPerView = Math.floor(track.offsetWidth / scrollAmount);
+    const maxIndex = items.length - itemsPerView;
 
     // Function to update carousel position
     function updateCarousel() {
@@ -27,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     rightArrow.addEventListener("click", () => {
-      if (currentIndex < totalItems - itemsPerView) {
+      if (currentIndex < maxIndex) {
         currentIndex++;
         updateCarousel();
       }
@@ -57,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (deltaX > 50 && currentIndex > 0) {
         currentIndex--;
-      } else if (deltaX < -50 && currentIndex < totalItems - itemsPerView) {
+      } else if (deltaX < -50 && currentIndex < maxIndex) {
         currentIndex++;
       }
 
