@@ -1,0 +1,34 @@
+---
+title: "Derps Delivery Debacle"
+description: "A game I made for the Ludum Dare 53 Game Jam."
+date: 2023-05-01
+layout: project
+image: "/assets/images/Thumbnail-Derps_Delivery_Debacle.png"
+frame: '<iframe frameborder="0" src="https://itch.io/embed/2043023?linkback=true&amp;dark=true" width="552" height="167"><a href="https://digx7.itch.io/derps-delivery-debacle">Derps Delivery Debacle by Digx7</a></iframe>'
+github: "https://github.com/Digx7/Ludum-Dare-53"
+---
+
+<p>D'erp used to have friends.&nbsp; &nbsp;Now their all gone.&nbsp; All that's left is Hope's last gift.&nbsp; But the demons of the void have come to take even that.&nbsp; Armed with his trusty turret D'erp must venture into dark maze to find resources, upgrades, and tools to help him combat the demons.&nbsp; Can you survive the maze?</p>
+<p><br></p>
+<p>===============================================================</p>
+<p>Objective</p>
+<ul>
+  <li>Deliver the bomb to the sorcerer to win</li>
+  <li>Protect the flower from waves of fiends</li>
+  <li>Navigate the maze and find upgrades</li>
+</ul>
+<p></p>
+<p>Controls
+</p>
+<ul><li>Move: ..................................... WASD,&nbsp; Arrow Keys&nbsp; or Left Stick</li><li>Pick Up: .................................. Space or South Face Button
+</li><li>Drop: ....................................... Left Shift , n Key,&nbsp;or East Face Button</li><li>Look at Different Item: ..... Alt,&nbsp;&nbsp;m Key, or North Face Button
+</li></ul>
+<p></p>
+<p>Items</p>
+<ul><li>Bomb: drop at sorcerer to win
+</li><li>Chest: drop at turret to upgrade
+</li><li>Keys: drop at corresponding door to open</li><li>Boots: run faster</li><li>Map: remember where you've been</li><li>Staff: shows when the next wave comes</li></ul>
+<p><br></p>
+<p>===============================================================</p>
+<p>This game was made for the Ludum Dare 53 Game Jam.&nbsp; The Theme was Delivery.</p>
+<p></p>
