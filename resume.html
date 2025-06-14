@@ -3,4 +3,156 @@ layout: resume
 title: Resume
 ---
 
-<div class="Section Header" id="Resume-Header"><h2>Resume</h2></div>
+<div id="Resume-Header">
+    <div class="Section Header" ><h2>Everete Webber</h2></div>
+    <div id="Resume-Contact-Info"></div>
+    <div class="Button">
+        <a href="/assets/downloads/Resume_Everette D Webber.pdf">
+            <p class="DarkText">Download</p>
+        </a>
+    </div>
+</div>
+
+<div id="Resume-Summary">
+    <div class="Section Header" ><h2>Summary</h2></div>
+    <div id="Resume-SummaryContent">
+        <p>Computer Programmer with 6+ years of self-taught experience in coding and system development. Proficient in C, 
+C++, C #, Lua, Ruby, HLSL, Python, Java, and SQL, with a well-rounded foundation in both Linux and Windows 
+environments. </p>
+    </div>
+</div>
+
+<div id="Resume-Skills">
+    <div class="Section Header" ><h2>Skills</h2></div>
+
+    <ul>
+        <li>
+            <p><strong>Programming Languages: </strong> Lua, C#, C++, Python, Java, SQL, HLSL, Bash, PowerShell</p>
+        </li>
+        <li>
+            <p><strong>Game Engines: </strong> Unity, Unreal Engine 5, PICO-8</p>
+        </li>
+        <li>
+            <p><strong>Technical Skills </strong> Shader Programming, Finite State Machines, CICD, Design Patterns</p>
+        </li>
+        <li>
+            <p><strong>Software & Tools:  </strong> Git, Blender, Android Studio</p>
+        </li>
+    </ul>
+
+</div>
+
+
+<div id="Resume-Projects">
+    <div class="Section Header" ><h2>Projects</h2></div>
+
+    <div class="grid">
+    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    {% assign stared_projects = sorted_projects | where_exp: "item", "item.star == true" %}
+
+
+    {% for project in stared_projects %}
+
+      {% if project.draft %}
+        {% continue %}
+      {% endif %}
+
+      <a href="{{ project.url | relative_url }}" class="grid-card">
+        <div class="project-content">
+          {% if project.image %}
+            <img src="{{ project.image | relative_url }}" alt="{{ project.title }} thumbnail">
+          {% else %}
+            <img src="/assets/images/Digx7-Logo-White_v2.svg" alt="{{ project.title }} thumbnail">
+          {% endif %}
+
+          {% if project.title %}
+            <h2>{{ project.title }}</h2>
+          {% else %}
+            <h2>Untitled Project</h2>
+          {% endif %}
+
+          {% if project.date %}
+            <i>{{ project.date | date: "%Y-%m-%d" }}</i>
+          {% else %}
+            <i>unknown date</i>
+          {% endif %}
+
+          {% if project.description %}
+            <p>{{ project.description }}</p>
+          {% endif %}
+          
+        </div>
+      </a>
+    {% endfor %}
+
+    <a href="https://digx7.github.io/projects/" class="grid-card">
+        <div>
+            <img src="/assets/images/Digx7-Logo-White_v2.svg" alt="{{ project.title }} thumbnail">
+            <h2>View More</h2>
+            <p>See all projects</p>
+        </div>
+    </a>
+
+
+    </div>
+
+</div>
+
+<div id="Resume-Education">
+    <div class="Section Header" ><h2>Education</h2></div>
+
+    <div id="Resume-Education-Conent">
+        <h2>California State University, Fullerton</h2>
+        <i>Bachelor of Science in Computer Science</i>
+        <p>Organizations: California State University, Fullerton Game Development Club </p>
+    </div>
+</div>
+
+<div id="Resume-Work-and-Volunteer-Experience">
+    <div class="Section Header" ><h2>Work and Volunteer Experience</h2></div>
+
+    <div class="grid">
+
+        <div class="grid-card">
+            <h2>Elong Incorporated</h2>
+            <h3>Facility and Logistics Assistant</h3>
+            <i>Feb 2022 - Present</i>
+            <ul>
+                <li>Coordinated supplier and retail logistics for private label products, ensuring on-time delivery</li>
+                <li>Partnered with managers to establish smooth operational workflows.</li>
+                <li>Streamlined operational efficiency and increased throughput by 50%.  </li>
+            </ul>
+        </div>
+
+        <div class="grid-card">
+            <h2>Renew Church</h2>
+            <h3>Live Audio Engineer</h3>
+            <i>August 2020 - Present</i>
+            <ul>
+                <li>Managed audio equipment to produce high-quality sound for live events</li>
+                <li>Designed and implemented an audio pipeline for large events totaling 500+ attendees.</li>
+                <li>Sound Mixed for 10+ artists at once to improve the experience in real time.</li>
+            </ul>
+        </div>
+
+        <div class="grid-card">
+            <h2>Royal Family Kids Camp</h2>
+            <h3>Foster Care Camp Videographer</h3>
+            <i>Summer 2023, 2024, 2025</i>
+            <ul>
+                <li>Produced and edited 19+ daily 15-minute recap videos, capturing memorable moments to enhance the foster kids' summer camp experience</li>
+                <li>Navigated fast-paced, changing dynamic environments to capture candid moments and tell genuine stories</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="Resume-Footer">
+    <div class="Button">
+        <a href="/assets/downloads/Resume_Everette D Webber.pdf">
+            <p class="DarkText">Download</p>
+        </a>
+    </div>
+</div>
