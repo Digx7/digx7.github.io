@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to update carousel position
     function updateCarousel() {
-      const offset = currentIndex * itemWidth;
+      const offset = currentIndex * scrollAmount;
       track.style.transform = `translateX(-${offset}px)`;
     }
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentIndex++;
       }
 
-      currentTranslate = -(currentIndex * itemWidth);
+      currentTranslate = -(currentIndex * scrollAmount);
       track.style.transform = `translateX(${currentTranslate}px)`;
     });
 
