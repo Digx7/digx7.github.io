@@ -54,8 +54,8 @@ title: home
             {% assign stared_projects = sorted_projects | where_exp: "item", "item.star == true" %}
 
             {% for project in stared_projects %}
-                <a href="{{ project.url | relative_url }}">
-                    <div class="carousel-item">
+                <a href="{{ project.url | relative_url }}" class="carousel-item">
+                    <div>
                         {% if project.image %}
                             <img src="{{ project.image | relative_url }}" alt="{{ project.title }} thumbnail">
                         {% else %}
