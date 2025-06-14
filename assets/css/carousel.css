@@ -10,13 +10,12 @@
 }
 
 .carousel-track {
-  overflow: hidden;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .carousel-item {
-  flex: 0 0 100%;
   background: #1e1e1e;
   padding: 1rem;
   border-radius: 8px;
