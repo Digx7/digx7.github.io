@@ -1,0 +1,41 @@
+#Resume-Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(145deg, #0f0f0f, #1f1f1f);
+}
+
+#Resume-Summary, #Resume-Skills, #Resume-Education {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #121212;
+}
+
+#Resume-SummaryContent, #Resume-SkillsContent, #Resume-EducationConent {
+  max-width: 700px;
+  margin: auto;
+}
+
+
+#Resume-Projects {
+    padding: 2rem;
+    background: #111;
+    color: #f0f0f0;
+}
+
+#Resume-Work-and-Volunteer-Experience {
+    padding: 2rem;
+    background: #111;
+    color: #f0f0f0;
+}
+
+#Resume-Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(145deg, #0f0f0f, #1f1f1f);
+}
