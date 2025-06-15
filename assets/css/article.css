@@ -59,3 +59,8 @@ iframe {
   border-radius: 6px;
   overflow-x: auto;
 }
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

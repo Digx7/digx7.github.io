@@ -43,4 +43,4 @@ For now I'm considering the site finished enough to be used.  I've already linke
 
 ***
 
-Visit the site here: [Link](https://digx7.github.io/index.html)
+Visit the site here: [digx7.github.io](https://digx7.github.io/index.html)
