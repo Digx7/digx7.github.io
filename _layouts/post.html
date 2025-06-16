@@ -32,7 +32,7 @@
     <div class="article-links">
       {% if page.related_projects %}
         <h3 class="Section Header">Related Project</h3>
-        <!-- <div class="grid"> -->
+        <div class="grid">
           {% for slug in page.related_projects %}
             {% assign related = site.projects | where: "slug", slug | first %}
 
@@ -61,7 +61,7 @@
             </a>
 
           {% endfor %}
-        <!-- </div> -->
+        </div>
       {% endif %}
     </div>
 
