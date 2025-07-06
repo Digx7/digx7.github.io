@@ -64,3 +64,11 @@ p {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;       /* scales image to container width */
+  height: auto;      /* keeps aspect ratio */
+  max-width: 600px;  /* optional max limit */
+}
