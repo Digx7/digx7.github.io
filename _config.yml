@@ -2,6 +2,7 @@
 title: Everette Webber Portfolio
 description: >- 
   Developer Portfolio featuring projects, blogs, and more.
+author: Everette Webber
 baseurl: "" # e.g., /portfolio if hosted in a subdirectory
 url: "https://yourdomain.com" # change to your domain when live
 
