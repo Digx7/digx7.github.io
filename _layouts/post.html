@@ -23,7 +23,7 @@
 
     <div class="article-links">
       {% if page.last_post %}
-        {% for slug in page.next_post %}
+        {% for slug in page.last_post %}
           {% assign related = site.posts | where: "slug", slug | first %}
           
           
@@ -139,7 +139,7 @@
       {% endif %}
 
       {% if page.last_post %}
-        {% for slug in page.next_post %}
+        {% for slug in page.last_post %}
           {% assign related = site.posts | where: "slug", slug | first %}
           
           
