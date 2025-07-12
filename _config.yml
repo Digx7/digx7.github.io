@@ -59,3 +59,8 @@ include:
 
 # Forces jekyll to render posts with a future date
 future: true
+
+# Used for RSS feed
+feed:
+  icon: /assets/images/Digx7-Logo-White_v2.svg
+  posts_limit: 20
