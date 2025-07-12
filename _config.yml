@@ -55,3 +55,6 @@ exclude:
 # Include any static files or directories Jekyll might ignore
 include:
   - _projects
+
+# Forces jekyll to render posts with a future date
+future: true
