@@ -60,13 +60,13 @@ iframe {
   overflow-x: auto;
 }
 
-p {
+.article-content p {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-img {
-  /* display: block; */
+.article-content img {
+  display: block;
   margin: 0 auto;
   width: 100%;       /* scales image to container width */
   height: auto;      /* keeps aspect ratio */
