@@ -4,7 +4,7 @@ description: >-
   Developer Portfolio featuring projects, blogs, and more.
 author: Everette Webber
 baseurl: "" # e.g., /portfolio if hosted in a subdirectory
-url: "https://yourdomain.com" # change to your domain when live
+url: "https://digx7.github.io" # change to your domain when live
 
 # Build settings
 markdown: kramdown
