@@ -3,10 +3,10 @@ title: "The Making of: Frost Loop (Game Jam)"
 description: "How I made a game for the GMTK 2025 game jam"
 date: 2025-08-02
 layout: post
-image: "/assets/images/Thumbnail-Portfolio_Website.png"
+image: "/assets/images/Thumbnails/FrostLoop_GameJam.webp"
 related_projects:
   - Frost Loop (Game Jam)
-draft: true
+draft: false
 ---
 
 FrostLoop was a Survival City-Building game with heavy FrostPunk and SnowPiercer inspirations that I built for the GMTK 2025 game jam.  This is how I built it.
@@ -39,6 +39,9 @@ Trains, that got me thinking about SnowPiercer.  I'd never seen a game based on 
 
 But if I were to make one it could be a cool FrostPunk like city builder game with a limited scope.  Since you'd only be placing the train cars in a line it would limit the complexity I'd need to design.  Also the game could be 2D and allow me to stress test my workflow with the drawing tablet.
 
+**Reference Images**
+![Reference Images](https://digx7.github.io/assets/images/posts/TheMakingOf/FrostLoop_GameJam/ReferenceImageBoard.gif "alt text")
+
 The game loop I landed on was this:
 The player would manage a train of people trying to maximize some resources without those people rebelling.
 
@@ -54,6 +57,9 @@ With design in hand I could start development.  Even though the jam ran for 4 da
 The Backend is all the systems that store and manage the players data for the game.
 
 I spent about an hour ideating on my game idea and writing out all the systems I'd need to execute it.
+
+**Systems Layout**
+![Systems Layout](https://digx7.github.io/assets/images/posts/TheMakingOf/FrostLoop_GameJam/SystemsLayout.gif "alt text")
 
 The main systems I got where:
 - Resource Manager
@@ -182,6 +188,9 @@ Turn Manager.  This system just handled the order of what other systems to call 
 
 Game Manager.  Just check if the game is over.  Based on the end state it queues a given event.
 
+**End Of Day 1**
+![End Of Day 1](https://digx7.github.io/assets/images/posts/TheMakingOf/FrostLoop_GameJam/Day1Game.gif "alt text")
+
 # Day 2 The Frontend
 
 Day 2 was spent working on the Frontend.  This included Artwork, UI, polishing, and various bug fixes.  This was also my last day and the day I released the game.
@@ -218,6 +227,9 @@ These were also made on a single spritesheet.
 ### The particles
 I easily made these in Krita.  I made a bunch but ended up only using 1.
 
+**Day 2 Vibes**
+![Day 2 Vibes](https://digx7.github.io/assets/images/posts/TheMakingOf/FrostLoop_GameJam/Day2Vibes.gif "alt text")
+
 ### The UI Icons
 Like the background these were all made on a single spritesheet.
 
@@ -240,6 +252,9 @@ Another example is the menu for buying new trains.  Once the player selects whic
 Just a reminder NONE of the logic of these Backend systems existed in these UI Widgets.  Honestly this is probably good dev practice in general.
 
 What took the longest *and was the cause of the most bugs* was making sure that each button on any UI widget talked to the correct systems in the correct order.
+
+**Day 2 UI**
+![Day 2 UI](https://digx7.github.io/assets/images/posts/TheMakingOf/FrostLoop_GameJam/Day2UI.gif "alt text")
 
 ## Polishing and bug fixes
 Near the end with all the systems and front end online I began to test the game for polish and bugs.
