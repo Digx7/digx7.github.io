@@ -7,7 +7,7 @@ image: "/assets/images/Thumbnails/FrostLoop_Devlog_5_Thumbnail.webp"
 draft: false
 ---
 
-[Want](videoLink) to watch this instead?
+[Want](https://youtu.be/LgifxDNlfBM) to watch this instead?
 [Wishlist](https://store.steampowered.com/app/3967750/Frost_Loop) FrostLoop here
 
 ## Intro
