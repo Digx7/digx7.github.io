@@ -4,10 +4,11 @@ description: "I have a steam store page now!"
 date: 2025-11-08
 layout: post
 image: "/assets/images/Thumbnails/FrostLoop_Devlog_5_Thumbnail.webp"
-draft: true
+draft: false
 ---
 
 [Want](videoLink) to watch this instead?
+[Wishlist](https://store.steampowered.com/app/3967750/Frost_Loop) FrostLoop here
 
 ## Intro
 Hello I’m Digx7 and this is Devlog 5 of Frostloop, a train survival management game.
