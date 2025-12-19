@@ -1,5 +1,5 @@
 ---
-title: "Tools Unlocked | Frost Loop | Devlog 56"
+title: "Tools Unlocked | Frost Loop | Devlog 6"
 description: "Tools to help be Dev!"
 date: 2025-12-19
 layout: post
@@ -73,7 +73,7 @@ This got me thinking about the potential worst case scenario.  As a game dev how
 2,3,5.. Try 20+.
 
 How in the world did I come up with that number?
-Well let's think through what separates builds.  First you have the full game, and maybe a demo (sku).  But what if you also want to release on Windows, Mac, and Linux.  Each of those needs a demo as well.  If you’re releasing your game on Steam and including steam achievements and cloud saves your builds need to connect to Steam’s API.  That means if you also release any other pc platforms like Epic, itch, or the Windows Store those builds need to be separate, and even unique if those platforms have their own APIs.  This is starting to add up.  And you could still have web builds, mobile builds, and console builds.  Any one of these builds could have its own dev build for testing, or a unique showcase version used just for in person conventions, and we haven’t even added localization into the mix.
+Well let's think through what separates builds.  First you have the full game, and maybe a demo.  But what if you also want to release on Windows, Mac, and Linux.  Each of those needs a demo as well.  If you’re releasing your game on Steam and including steam achievements and cloud saves your builds need to connect to Steam’s API.  That means if you also release any other pc platforms like Epic, itch, or the Windows Store those builds need to be separate, and even unique if those platforms have their own APIs.  This is starting to add up.  And you could still have web builds, mobile builds, and console builds.  Any one of these builds could have its own dev build for testing, or a unique showcase version used just for in person conventions, and we haven’t even added localization into the mix.
 
 Obviously this is an excessive example and I can’t really think of any game that actually does this.  But if I have one script that can automatically make and deploy one or all of these builds at once, that will be a huge benefit to me in the future.  Not just for this game but for any game I make.
 
