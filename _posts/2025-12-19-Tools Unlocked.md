@@ -4,6 +4,8 @@ description: "Tools to help be Dev!"
 date: 2025-12-19
 layout: post
 image: "/assets/images/Thumbnails/FrostLoop_Devlog_6_Thumbnail.webp"
+related_projects:
+  - Frost Loop (Steam Game)
 draft: false
 ---
 

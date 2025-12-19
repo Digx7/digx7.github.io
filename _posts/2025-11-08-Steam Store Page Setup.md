@@ -4,6 +4,8 @@ description: "I have a steam store page now!"
 date: 2025-11-08
 layout: post
 image: "/assets/images/Thumbnails/FrostLoop_Devlog_5_Thumbnail.webp"
+related_projects:
+  - Frost Loop (Steam Game)
 draft: false
 ---
 
