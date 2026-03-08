@@ -16,7 +16,7 @@ Want to [watch](https://youtu.be/jV2meT3DFLM) this instead?
 Hello I’m Digx7 and this is Devlog 7 of my first steam game Frost Loop a Survival City Builder on Rails
 
 ## Composer
-Near the start of January I signed on a Music Composer: Guillaume Fabre.  We had been talking back and forth for a bit and I loved the demo they sent me.  Initially I was planning on working on the project completely solo, but since my main objective is to use this project to boost my portfolio I figured being able to add ‘contracting a composer’ to my resume would be a huge plus.
+Near the start of January I signed on a Music Composer: [Guillaume Fabre](https://guillaumefabre.com).  We had been talking back and forth for a bit and I loved the demo they sent me.  Initially I was planning on working on the project completely solo, but since my main objective is to use this project to boost my portfolio I figured being able to add ‘contracting a composer’ to my resume would be a huge plus.
 So once I made this decision I spent a bit of time researching contracts. I wanted to do this fairly and properly.  During my research I came across a great series of GDC talks on legal contracts for game developers, I’ll link it in the description below.  (NOT LEGAL ADVICE)
 I won’t go into details on any of the terms we settled on but I’m very happy with the arrangement and the work that Faber has produced since.
 I’ll link his details in the description if you happen to be looking for a composer as well.
