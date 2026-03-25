@@ -9,7 +9,7 @@ related_projects:
 draft: false
 ---
 
-Want to [watch](https://youtu.be/qGnDHgKJAgU) this instead?
+Want to [watch](https://youtu.be/gjeP7ATnQSQ) this instead?
 [Play FrostLoop](https://store.steampowered.com/app/3967750/Frost_Loop)
 
 ## Intro
